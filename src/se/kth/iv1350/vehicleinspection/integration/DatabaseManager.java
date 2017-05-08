@@ -45,8 +45,6 @@ public class DatabaseManager {
     /**
      * printing a welcome back expression at the end of the inspection
      */
-    public void welcomeBack(){
-        System.out.println("Welcome Back");
-    }
+    
 
 }

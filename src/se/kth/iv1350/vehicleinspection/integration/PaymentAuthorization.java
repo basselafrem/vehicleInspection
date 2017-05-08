@@ -1,5 +1,8 @@
 
 package se.kth.iv1350.vehicleinspection.integration;
+
+import se.kth.iv1350.vehicleinspection.model.Card;
+
 /**
  * Represent the external payment authorization
  * @author Bassel
@@ -13,8 +16,8 @@ public class PaymentAuthorization {
      * @param cost the cost of the inspection
      * @return true if the payment authorized.
      */
-    public boolean authRequest(int cost){
-        System.out.println("Payment authorization has been confirmed");
+    public boolean authRequest(Card card){
+        
         return true;
     }  
 }

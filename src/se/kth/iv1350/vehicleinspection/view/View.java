@@ -42,13 +42,14 @@ public class View {
               {
                   contr.payByCard(cost);
                   // printing the receipt
+                  System.out.println("Payment authorization has been confirmed");
                   contr.printReceipt();
                   // finding the inspection
                   contr.findInspectionsByVehicle(regNo);
                   // printing the names of the inspected items
                   contr.printNameAndResult(regNo);
                   //printing welcome back on the screen 
-                  contr.welcomeBack();
+                  System.out.println("Welcome Back") ;
                   break;
               }
           case "cash":
@@ -56,7 +57,8 @@ public class View {
                   // entering paidAmount
                   System.out.println("How much do you want ot pay: ");
                   int paidAmount = in.nextInt();
-                  contr.payByCash(paidAmount, cost);
+                  int change = contr.payByCash(paidAmount, cost);
+                  System.out.println("The change is : " + change);
                   //printing the receipt
                   contr.cashReceipt();
                   //finding the inspection
@@ -64,7 +66,7 @@ public class View {
                   //printing the names of the inspected items
                   contr.printNameAndResult(regNo);
                   //print welcome back 
-                  contr.welcomeBack(); 
+                  System.out.println("Welcome Back") ;
                   break;
               }
           default:
