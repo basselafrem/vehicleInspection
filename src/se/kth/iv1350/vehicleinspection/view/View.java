@@ -3,6 +3,7 @@ package se.kth.iv1350.vehicleinspection.view;
 
 import  se.kth.iv1350.vehicleinspection.controller.Controller;
 import java.util.*;
+import se.kth.iv1350.vehicleinspection.integration.InspectionItem;
 /**
  *
  * This class is a placeholder for the view.
@@ -46,6 +47,7 @@ public class View {
                   contr.printReceipt();
                   // finding the inspection
                   contr.findInspectionsByVehicle(regNo);
+                     
                   // printing the names of the inspected items
                   contr.printNameAndResult(regNo);
                   //printing welcome back on the screen 

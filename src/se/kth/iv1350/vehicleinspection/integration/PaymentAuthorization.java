@@ -13,7 +13,7 @@ public class PaymentAuthorization {
    
     /**
      * Confirms the payment
-     * @param cost the cost of the inspection
+     * @param card the card the will pay with
      * @return true if the payment authorized.
      */
     public boolean authRequest(Card card){

@@ -40,6 +40,7 @@ public class Controller {
     }
     /**
      * the operation of paying by card 
+     * @param cost the cost of the inspection
      */
     public void payByCard(int cost){
         card = new Card("Bassel Afrem", 345, "1234 5678 1234 5678", "12/20");
@@ -51,6 +52,7 @@ public class Controller {
        /**
      * calling getCost in class inspection 
      * 
+     * @param regNo the registration number of the vehicle
      * @return the cost of the inspection
      */
     public int getCost(String regNo){
@@ -63,6 +65,7 @@ public class Controller {
      * paying cash 
      * @param paidAmount the amount paid by the costumer
      * @param cost the cost of the inspection required
+     * @return the change to be returned
      */
     public int  payByCash(int paidAmount, int cost) {
         int change = paidAmount - cost;
