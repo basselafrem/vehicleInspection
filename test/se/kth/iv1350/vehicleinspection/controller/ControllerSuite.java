@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package se.kth.iv1350.vehicleinspection.integration;
+package se.kth.iv1350.vehicleinspection.controller;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -17,8 +17,8 @@ import org.junit.runners.Suite;
  * @author Bassel
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({se.kth.iv1350.vehicleinspection.integration.PaymentAuthorizationTest.class, se.kth.iv1350.vehicleinspection.integration.GarageTest.class, se.kth.iv1350.vehicleinspection.integration.GarageDoorTest.class, se.kth.iv1350.vehicleinspection.integration.InspectionItemTest.class, se.kth.iv1350.vehicleinspection.integration.PrinterTest.class, se.kth.iv1350.vehicleinspection.integration.DisplayTest.class, se.kth.iv1350.vehicleinspection.integration.DatabaseManagerTest.class})
-public class IntegrationSuite {
+@Suite.SuiteClasses({se.kth.iv1350.vehicleinspection.controller.ControllerTest.class})
+public class ControllerSuite {
 
     @BeforeClass
     public static void setUpClass() throws Exception {

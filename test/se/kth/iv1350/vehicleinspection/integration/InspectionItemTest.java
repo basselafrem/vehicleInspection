@@ -1,5 +1,8 @@
-
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package se.kth.iv1350.vehicleinspection.integration;
 
 import org.junit.After;
@@ -39,11 +42,11 @@ public class InspectionItemTest {
      */
     @Test
     public void testGetName() {
-        System.out.println("getName");
-        InspectionItem instance = new InspectionItem("suspention", 30);
+        
+        InspectionItem instance =  new InspectionItem("suspention", 30);;
         String expResult = "suspention";
         String result = instance.getName();
-        assertEquals("The result is ",expResult, result);
+        assertEquals(expResult, result);
         
     }
 
@@ -52,11 +55,11 @@ public class InspectionItemTest {
      */
     @Test
     public void testGetCost() {
-        System.out.println("getCost");
-        InspectionItem instance = new InspectionItem("suspention", 30);
+        
+        InspectionItem instance =  new InspectionItem("suspention", 30);;
         int expResult = 30;
         int result = instance.getCost();
-        assertEquals("The result is ",expResult, result);
+        assertEquals(expResult, result);
         
     }
     

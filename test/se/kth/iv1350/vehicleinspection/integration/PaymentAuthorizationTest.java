@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package se.kth.iv1350.vehicleinspection.integration;
 
 import org.junit.After;
@@ -7,6 +11,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import se.kth.iv1350.vehicleinspection.model.Card;
 
 /**
  *
@@ -38,11 +43,11 @@ public class PaymentAuthorizationTest {
      */
     @Test
     public void testAuthRequest() {
-        System.out.println("authRequest");
-        int cost = 60;
+       
+        Card card = new Card("bassel",343,"3245 32523","3/3");
         PaymentAuthorization instance = new PaymentAuthorization();
         boolean expResult = true;
-        boolean result = instance.authRequest(cost);
+        boolean result = instance.authRequest(card);
         assertEquals(expResult, result);
         
     }

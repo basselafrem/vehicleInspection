@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package se.kth.iv1350.vehicleinspection.integration;
 
 import org.junit.After;
@@ -38,7 +42,7 @@ public class DisplayTest {
      */
     @Test
     public void testDisplay() {
-        System.out.println("display");
+        
         int number = 0;
         Display instance = new Display();
         instance.display(number);

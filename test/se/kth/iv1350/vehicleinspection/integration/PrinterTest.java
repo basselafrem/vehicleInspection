@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package se.kth.iv1350.vehicleinspection.integration;
 
 import org.junit.After;
@@ -38,11 +42,11 @@ public class PrinterTest {
      */
     @Test
     public void testPrintResult() {
-        System.out.println("printResult");
+        
         boolean result_2 = true;
         Printer instance = new Printer();
         instance.printResult(result_2);
-       
+        
     }
 
     /**
@@ -50,11 +54,11 @@ public class PrinterTest {
      */
     @Test
     public void testPrintReceipt() {
-        System.out.println("printReceipt");
+        
         int amount = 60;
         Printer instance = new Printer();
         instance.printReceipt(amount);
-        
+       
     }
 
     /**
@@ -62,7 +66,7 @@ public class PrinterTest {
      */
     @Test
     public void testCashReceipt() {
-        System.out.println("cashReceipt");
+        
         int amount = 60;
         Printer instance = new Printer();
         instance.cashReceipt(amount);

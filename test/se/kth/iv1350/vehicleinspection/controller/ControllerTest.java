@@ -1,7 +1,10 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package se.kth.iv1350.vehicleinspection.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -9,7 +12,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import se.kth.iv1350.vehicleinspection.integration.*;
+import se.kth.iv1350.vehicleinspection.integration.DatabaseManager;
+import se.kth.iv1350.vehicleinspection.integration.InspectionItem;
 
 /**
  *
@@ -17,7 +21,7 @@ import se.kth.iv1350.vehicleinspection.integration.*;
  */
 public class ControllerTest {
     private DatabaseManager dbMgr = new DatabaseManager();
-    
+    private Controller instance = new Controller(dbMgr);
     
     public ControllerTest() {
     }
@@ -43,25 +47,34 @@ public class ControllerTest {
      */
     @Test
     public void testStartNewInspection() {
-        System.out.println("startNewInspection");
-        Controller instance = new Controller(dbMgr);
+        instance = new Controller(dbMgr);
         instance.startNewInspection();
         
     }
 
+    /**
+     * Test of payByCard method, of class Controller.
+     */
+    @Test
+    public void testPayByCard() {
+        
+        int cost = 60;
+        
+        instance.payByCard(cost);
+        
+    }
 
     /**
      * Test of getCost method, of class Controller.
      */
     @Test
     public void testGetCost() {
-       DatabaseManager dbMgr =new DatabaseManager();
-        System.out.println("getCost");
+       
         String regNo = "ABC123";
-        Controller instance = new Controller(dbMgr);
+        instance = new Controller(dbMgr);
         int expResult = 60;
         int result = instance.getCost(regNo);
-        assertEquals("The result is ",expResult, result);
+        assertEquals(expResult, result);
         
     }
 
@@ -70,11 +83,13 @@ public class ControllerTest {
      */
     @Test
     public void testPayByCash() {
-        System.out.println("payByCash");
+        
         int paidAmount = 100;
         int cost = 60;
-        Controller instance = new Controller (dbMgr);
-        instance.payByCash(paidAmount, cost);
+        instance = new Controller(dbMgr);
+        int expResult = 40;
+        int result = instance.payByCash(paidAmount, cost);
+        assertEquals(expResult, result);
        
     }
 
@@ -83,10 +98,10 @@ public class ControllerTest {
      */
     @Test
     public void testPrintReceipt() {
-        System.out.println("printReceipt");
-        Controller instance = new Controller(dbMgr);
-        instance.printReceipt();
         
+        instance = new Controller(dbMgr);
+        instance.printReceipt();
+       
     }
 
     /**
@@ -94,44 +109,25 @@ public class ControllerTest {
      */
     @Test
     public void testCashReceipt() {
-        System.out.println("cashReceipt");
-        Controller instance = new Controller(dbMgr);
+        
+        instance = new Controller(dbMgr);
         instance.cashReceipt();
+        
     }
 
-    /**
-     * Test of findInspectionsByVehicle method, of class Controller.
-     */
-    @Test
-    public void testFindInspectionsByVehicle() {
-        System.out.println("findInspectionsByVehicle");
-        String regNo = "ABC123";
-        Controller instance = new Controller (dbMgr);
-        List<InspectionItem> expResult = null;
-        List<InspectionItem> result = instance.findInspectionsByVehicle(regNo);
-        assertEquals("The result is ",expResult, result);
-    }
+   
+    
 
     /**
      * Test of printNameAndResult method, of class Controller.
      */
     @Test
     public void testPrintNameAndResult() {
-        System.out.println("printNameAndResult");
+        
         String regNo = "ABC123";
-        Controller instance = new Controller(dbMgr);
+        instance = new Controller(dbMgr);
         instance.printNameAndResult(regNo);
-    }
-
-    /**
-     * Test of welcomeBack method, of class Controller.
-     */
-    @Test
-    public void testWelcomeBack() {
-        System.out.println("welcomeBack");
-        Controller instance = new Controller(dbMgr);
-        instance.welcomeBack();
-       
+        
     }
     
 }

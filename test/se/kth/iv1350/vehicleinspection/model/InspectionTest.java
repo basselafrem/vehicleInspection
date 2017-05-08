@@ -41,7 +41,7 @@ public class InspectionTest {
     public void testGetCost() {
         DatabaseManager dbMgr = new DatabaseManager();
         Vehicle vehicle = new Vehicle("ABC123");
-        System.out.println("getCost");
+       
         Inspection instance = new Inspection(vehicle, dbMgr);
         int expResult = 60;
         int result = instance.getCost();
@@ -56,7 +56,7 @@ public class InspectionTest {
     public void testPrintNameAndResult() {
         DatabaseManager dbMgr = new DatabaseManager();
         Vehicle vehicle = new Vehicle("ABC123");
-        System.out.println("printNameAndResult");
+        
         Inspection instance = new Inspection(vehicle,dbMgr);
         instance.printNameAndResult();
         

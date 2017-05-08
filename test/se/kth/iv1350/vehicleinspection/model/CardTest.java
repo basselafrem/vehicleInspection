@@ -38,7 +38,7 @@ public class CardTest {
      */
     @Test
     public void testGetHolder() {
-        System.out.println("getHolder");
+        
         Card instance = new Card("Bassel", 3,"1234","12\3");
         String expResult = "Bassel";
         String result = instance.getHolder();
@@ -50,7 +50,7 @@ public class CardTest {
      */
     @Test
     public void testGetCVC() {
-        System.out.println("getCVC");
+        
         Card instance = new Card("Bassel", 3,"1234","12\3");
         int expResult = 3;
         int result = instance.getCVC();
@@ -63,7 +63,7 @@ public class CardTest {
      */
     @Test
     public void testGetNumber() {
-        System.out.println("getNumber");
+        
         Card instance = new Card("Bassel", 3,"1234","12\3");
         String expResult = "1234";
         String result = instance.getNumber();
@@ -76,7 +76,7 @@ public class CardTest {
      */
     @Test
     public void testGetexpiryDate() {
-        System.out.println("getexpiryDate");
+        
         Card instance = new Card("Bassel", 3,"1234","12\3");
         String expResult = "12\3";
         String result = instance.getexpiryDate();
